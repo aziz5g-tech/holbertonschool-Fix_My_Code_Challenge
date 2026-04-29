@@ -9,7 +9,7 @@ def sort_array(args)
     end
   end.sort do |a, b|
     if a.is_a?(Integer) && b.is_a?(Integer)
-      b <=> a
+      a <=> b
     elsif a.is_a?(Integer)
       -1
     elsif b.is_a?(Integer)
@@ -21,4 +21,4 @@ def sort_array(args)
 end
 
 result = sort_array(ARGV)
-puts result.join
+result.each { |element| puts element }
