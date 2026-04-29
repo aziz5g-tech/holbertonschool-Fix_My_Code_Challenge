@@ -21,4 +21,4 @@ def sort_array(args)
 end
 
 result = sort_array(ARGV)
-result.each { |element| puts element }
+result.each { |element| puts element if element.is_a?(Integer) }
