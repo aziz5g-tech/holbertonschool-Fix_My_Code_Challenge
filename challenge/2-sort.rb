@@ -2,7 +2,7 @@
 
 def sort_array(args)
   args.map do |str|
-    if str.to_i.to_s == str || str.to_i.to_s == str.to_s
+    if str.match?(/^-?\d+$/)
       str.to_i
     else
       str
@@ -21,4 +21,4 @@ def sort_array(args)
 end
 
 result = sort_array(ARGV)
-result.each { |element| puts element }
+puts result.join
